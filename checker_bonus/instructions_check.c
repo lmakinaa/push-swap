@@ -6,13 +6,13 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 11:49:12 by ijaija            #+#    #+#             */
-/*   Updated: 2023/12/18 17:59:19 by ijaija           ###   ########.fr       */
+/*   Updated: 2023/12/31 19:42:52 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/helpers.h"
 
-static int check_duos(char *file, int i)
+static int	check_duos(char *file, int i)
 {
 	if (file[i] == 's' && file[i + 1] == 'a')
 		i += 2;
@@ -33,7 +33,7 @@ static int check_duos(char *file, int i)
 	return (i);
 }
 
-static int check_trios(char *file, int i)
+static int	check_trios(char *file, int i)
 {
 	if (file[i] == 'r' && file[i + 1] == 'r' && file[i + 2] == 'r')
 		i += 3;
@@ -48,13 +48,13 @@ static int check_trios(char *file, int i)
 	return (i);
 }
 
-int instructions_check(char *file)
+int	instructions_check(char *file)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
 	if (!file)
-		return (-1);
+		exit(ft_printf("KO\n"));
 	while (file[i])
 	{
 		if (file[i] == '\n')

@@ -6,19 +6,21 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 17:25:48 by ijaija            #+#    #+#             */
-/*   Updated: 2023/12/18 17:26:09 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/02 16:02:03 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/helpers.h"
 
-void	rr(t_list *stack_a, t_list *stack_b)
+void	rr(t_list *stack_a, t_list *stack_b, char *print)
 {
-	rx(stack_a);
-	rx(stack_b);
+	rx(stack_a, NULL);
+	rx(stack_b, NULL);
+	if (print)
+		ft_putendl_fd(print, 1);
 }
 
-void	rrx(t_list *stack_x)
+void	rrx(t_list *stack_x, char *print)
 {
 	t_node	*tmp;
 
@@ -33,10 +35,14 @@ void	rrx(t_list *stack_x)
 		stack_x->head = tmp;
 		stack_x->tail->next = NULL;
 	}
+	if (print)
+		ft_putendl_fd(print, 1);
 }
 
-void	rrr(t_list *stack_a, t_list *stack_b)
+void	rrr(t_list *stack_a, t_list *stack_b, char *print)
 {
-	rrx(stack_a);
-	rrx(stack_b);
+	rrx(stack_a, NULL);
+	rrx(stack_b, NULL);
+	if (print)
+		ft_putendl_fd(print, 1);
 }

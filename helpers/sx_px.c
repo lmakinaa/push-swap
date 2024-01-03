@@ -6,13 +6,13 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 17:24:39 by ijaija            #+#    #+#             */
-/*   Updated: 2023/12/18 17:25:21 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/02 16:00:39 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/helpers.h"
 
-void	sx(t_list *stack_x)
+void	sx(t_list *stack_x, char *print)
 {
 	int		tmp;
 
@@ -22,15 +22,19 @@ void	sx(t_list *stack_x)
 		stack_x->head->value = stack_x->head->next->value;
 		stack_x->head->next->value = tmp;
 	}
+	if (print)
+		ft_putendl_fd(print, 1);
 }
 
-void	ss(t_list *stack_a, t_list *stack_b)
+void	ss(t_list *stack_a, t_list *stack_b, char *print)
 {
-	sx(stack_a);
-	sx(stack_b);
+	sx(stack_a, NULL);
+	sx(stack_b, NULL);
+	if (print)
+		ft_putendl_fd(print, 1);
 }
 
-void	px(t_list *stack_x1, t_list *stack_x2)
+void	px(t_list *stack_x1, t_list *stack_x2, char *print)
 {
 	t_node	*tmp;
 
@@ -41,9 +45,11 @@ void	px(t_list *stack_x1, t_list *stack_x2)
 		tmp->next = stack_x1->head;
 		stack_x1->head = tmp;
 	}
+	if (print)
+		ft_putendl_fd(print, 1);
 }
 
-void	rx(t_list *stack_x)
+void	rx(t_list *stack_x, char *print)
 {
 	t_node	*tmp;
 
@@ -54,4 +60,6 @@ void	rx(t_list *stack_x)
 		tmp->next = NULL;
 		l_addback(stack_x, tmp);
 	}
+	if (print)
+		ft_putendl_fd(print, 1);
 }

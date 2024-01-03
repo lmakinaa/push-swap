@@ -1,27 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   l_addfront.c                                       :+:      :+:    :+:   */
+/*   reading_input.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/07 16:07:46 by ijaija            #+#    #+#             */
-/*   Updated: 2023/12/29 18:20:59 by ijaija           ###   ########.fr       */
+/*   Created: 2023/12/18 11:18:54 by ijaija            #+#    #+#             */
+/*   Updated: 2023/12/29 18:07:53 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/helpers.h"
 
-void	l_addfront(t_list *list, t_node *node)
+// int main()
+// {
+// 	int fd;
+// 	char	*file = NULL;
+// 	char *line;
+// 	fd = 0;
+// 	while ((line = get_next_line(fd)))
+// 		file = custom_strjoin(file, line);
+// 	printf("%s", file);
+// 	return (0);
+// }
+
+char	*reading_input(void)
 {
-	if (!node || !list)
-		return ;
-	if (!list->head)
+	char	*file;
+	char	*line;
+	int		fd;
+
+	fd = 0;
+	file = NULL;
+	line = get_next_line(fd);
+	while (line)
 	{
-		list->head = node;
-		list->tail = node;
-		return ;
+		file = custom_strjoin(file, line);
+		line = get_next_line(fd);
 	}
-	node->next = list->head;
-	list->head = node;
+	return (file);
 }
