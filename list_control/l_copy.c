@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   maymknch_sort.c                                    :+:      :+:    :+:   */
+/*   l_copy.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/03 18:35:24 by ijaija            #+#    #+#             */
-/*   Updated: 2024/01/03 19:23:39 by ijaija           ###   ########.fr       */
+/*   Created: 2024/01/03 18:52:02 by ijaija            #+#    #+#             */
+/*   Updated: 2024/01/03 18:52:46 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./../includes/helpers.h"
+#include "./../includes/list_control.h"
 
-void	maymknch_sort(t_list **stack_a, t_list **stack_b, int argc)
+t_list	*l_copy(t_list *list)
 {
-	t_list	*copy;
+	t_list	*new_list;
+	t_node	*node;
 
-	copy = l_copy(*stack_a);
-	list_indexing(stack_a, &copy);
-	l_display(*stack_a);
-	(void) stack_b;
-	(void) argc;
+	new_list = c_list();
+	node = list->head;
+	while (node)
+	{
+		l_addback(new_list, c_node(node->value));
+		node = node->next;
+	}
+	return (new_list);
 }
