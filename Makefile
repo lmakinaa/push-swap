@@ -14,9 +14,9 @@ HELPERS_O=$(HELPERS_DIR)/ft_printf.o $(HELPERS_DIR)/ft_putchar.o $(HELPERS_DIR)/
 	$(HELPERS_DIR)/rrx.o $(HELPERS_DIR)/sx_px.o $(HELPERS_DIR)/str_arrays_join.o $(HELPERS_DIR)/check_sorted.o $(HELPERS_DIR)/ft_putendl_fd.o
 LIST_CONTROL_O=$(LIST_CONTROL_DIR)/c_list.o $(LIST_CONTROL_DIR)/c_node.o $(LIST_CONTROL_DIR)/l_addafter.o $(LIST_CONTROL_DIR)/l_addback.o\
 	$(LIST_CONTROL_DIR)/l_addbefore.o $(LIST_CONTROL_DIR)/l_addfront.o $(LIST_CONTROL_DIR)/l_display.o $(LIST_CONTROL_DIR)/l_free.o\
-	$(LIST_CONTROL_DIR)/l_delnode.o $(LIST_CONTROL_DIR)/l_len.o $(LIST_CONTROL_DIR)/array_to_list.o
+	$(LIST_CONTROL_DIR)/l_delnode.o $(LIST_CONTROL_DIR)/l_len.o $(LIST_CONTROL_DIR)/array_to_list.o $(LIST_CONTROL_DIR)/l_copy.o
 CHECKER_O=$(CHECKER_DIR)/main.o $(CHECKER_DIR)/reading_input.o $(CHECKER_DIR)/instructions_check.o $(CHECKER_DIR)/check_ok_or_ko.o 
-PS_O=$(SRCS_DIR)/main.o $(SRCS_DIR)/sorting.o $(SRCS_DIR)/sort_tolati.o
+PS_O=$(SRCS_DIR)/main.o $(SRCS_DIR)/sorting.o $(SRCS_DIR)/sort_tolati.o $(SRCS_DIR)/maymknch_sort.o $(SRCS_DIR)/list_indexing.o
 BONUS_NAME=checker
 NAME=push_swap
 

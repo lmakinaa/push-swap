@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 15:36:50 by ijaija            #+#    #+#             */
-/*   Updated: 2023/12/31 19:46:24 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/03 18:44:14 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 typedef struct s_node
 {
 	int				value;
+	int				index;
 	struct s_node	*next;
 }			t_node;
 
