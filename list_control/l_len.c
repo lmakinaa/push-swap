@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 15:54:19 by ijaija            #+#    #+#             */
-/*   Updated: 2023/12/18 17:45:02 by ijaija           ###   ########.fr       */
+/*   Updated: 2023/12/29 20:26:29 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t	l_len(t_list *list)
 {
-	size_t len;
-	t_node *tmp;
+	size_t	len;
+	t_node	*tmp;
 
 	if (!list->head)
 		return (0);

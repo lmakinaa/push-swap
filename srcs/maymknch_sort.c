@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   l_addfront.c                                       :+:      :+:    :+:   */
+/*   maymknch_sort.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/07 16:07:46 by ijaija            #+#    #+#             */
-/*   Updated: 2023/12/29 18:20:59 by ijaija           ###   ########.fr       */
+/*   Created: 2024/01/03 18:35:24 by ijaija            #+#    #+#             */
+/*   Updated: 2024/01/03 18:37:12 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/helpers.h"
 
-void	l_addfront(t_list *list, t_node *node)
+void	maymknch_sort(t_list **stack_a, t_list **stack_b, int argc)
 {
-	if (!node || !list)
-		return ;
-	if (!list->head)
-	{
-		list->head = node;
-		list->tail = node;
-		return ;
-	}
-	node->next = list->head;
-	list->head = node;
+	
 }

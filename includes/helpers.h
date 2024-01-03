@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 15:09:08 by ijaija            #+#    #+#             */
-/*   Updated: 2023/12/18 17:55:51 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/03 17:24:15 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ int		ft_puthex(unsigned int n, char *base);
 size_t	ft_numbase_len(unsigned long long n);
 long	custom_atoi(const char *str);
 int		ft_isdigit(int c);
-void	ft_putstr_fd(char *s, int fd);
+int		ft_putstr_fd(char *s, int fd);
 void	fail_exit(void);
-int		args_parsing(int argc, char **argv, int *args);
+int		args_parsing(int *argc, char ***argv, int **args);
 char	*get_next_line(int fd);
 void	*freeing(char *str);
 char	*line_fill(char *stock);
@@ -45,14 +45,21 @@ char	*reading_input(void);
 int		instructions_check(char *file);
 char	**ft_split(char const *s, char c);
 int		ft_strcmp(char *s1, char *s2);
-void	rr(t_list *stack_a, t_list *stack_b);
-void	rrx(t_list *stack_x);
-void	rrr(t_list *stack_a, t_list *stack_b);
-void	rx(t_list *stack_x);
-void	sx(t_list *stack_x);
-void	ss(t_list *stack_a, t_list *stack_b);
-void	px(t_list *stack_x1, t_list *stack_x2);
+void	rr(t_list *stack_a, t_list *stack_b, char *print);
+void	rrx(t_list *stack_x, char *print);
+void	rrr(t_list *stack_a, t_list *stack_b, char *print);
+void	rx(t_list *stack_x, char *print);
+void	sx(t_list *stack_x, char *print);
+void	ss(t_list *stack_a, t_list *stack_b, char *print);
+void	px(t_list *stack_x1, t_list *stack_x2, char *print);
 void	processing_args(char **instructons, t_list *stack_a, t_list *stack_b);
-void	check_ok_or_ko(t_list *stack_a, size_t n_args);
+int		check_ok_or_ko(t_list *stack_a, size_t n_args);
+char	**str_arrays_join(char **dest, char **tmp);
+void	printing(int *argv);
+void	freeingx(char **argv);
+int		check_sorted(t_list *stack_a, size_t n_args);
+void	ft_putendl_fd(char *s, int fd);
+void	sorting(t_list **stack_a, t_list **stack_b, int argc);
+void	sort_tolati(t_list **stack_a);
 
 #endif

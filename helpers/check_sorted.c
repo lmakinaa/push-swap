@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   l_addfront.c                                       :+:      :+:    :+:   */
+/*   check_sorted.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/07 16:07:46 by ijaija            #+#    #+#             */
-/*   Updated: 2023/12/29 18:20:59 by ijaija           ###   ########.fr       */
+/*   Created: 2023/12/31 18:07:54 by ijaija            #+#    #+#             */
+/*   Updated: 2023/12/31 21:46:56 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/helpers.h"
 
-void	l_addfront(t_list *list, t_node *node)
+int	check_sorted(t_list *stack_a, size_t n_args)
 {
-	if (!node || !list)
-		return ;
-	if (!list->head)
+	t_node	*tmp;
+
+	if (!stack_a->head)
+		exit(ft_putstr_fd("Error\n", 2));
+	if (l_len(stack_a) != n_args)
+		return (0);
+	tmp = stack_a->head;
+	while (tmp && tmp->next)
 	{
-		list->head = node;
-		list->tail = node;
-		return ;
+		if (tmp->value > tmp->next->value)
+			return (0);
+		tmp = tmp->next;
 	}
-	node->next = list->head;
-	list->head = node;
+	return (1);
 }

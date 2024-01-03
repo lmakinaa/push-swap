@@ -6,32 +6,23 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 15:10:17 by ijaija            #+#    #+#             */
-/*   Updated: 2023/12/18 16:08:03 by ijaija           ###   ########.fr       */
+/*   Updated: 2023/12/31 19:55:16 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/helpers.h"
 
-void l_display(t_list *list)
+int	l_display(t_list *list)
 {
 	t_node	*after_head;
 	int		i;
 
 	if (!list)
-	{
-		ft_printf("The list is empty!\n");
-		return ;
-	}
+		return (ft_printf("The list is empty!\n"));
 	if (!list->head)
-	{
-		ft_printf("The list have no head!\n");
-		return ;
-	}
+		return (ft_printf("No head!\n"));
 	if (!list->tail)
-	{
-		ft_printf("The list have no tail!\n");
-		return ;
-	}
+		return (ft_printf("No tail!\n"));
 	ft_printf("The head's content-->[%d]\n", list->head->value);
 	after_head = list->head->next;
 	i = 2;
@@ -44,5 +35,5 @@ void l_display(t_list *list)
 			i++;
 		}
 	}
-	ft_printf("The tail's content-->[%d]\n", list->tail->value);
+	return (ft_printf("The tail's content-->[%d]\n", list->tail->value));
 }

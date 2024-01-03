@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 15:46:05 by ijaija            #+#    #+#             */
-/*   Updated: 2023/12/18 16:07:57 by ijaija           ###   ########.fr       */
+/*   Updated: 2023/12/29 18:21:47 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	l_delnode(t_list *list, t_node *node)
 {
-	t_node *tmp;
+	t_node	*tmp;
 
 	tmp = list->head;
 	if (tmp == node)

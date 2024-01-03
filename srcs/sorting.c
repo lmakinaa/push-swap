@@ -1,40 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reading_input.c                                    :+:      :+:    :+:   */
+/*   sorting.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/18 11:18:54 by ijaija            #+#    #+#             */
-/*   Updated: 2023/12/18 11:49:19 by ijaija           ###   ########.fr       */
+/*   Created: 2023/12/30 16:11:53 by ijaija            #+#    #+#             */
+/*   Updated: 2024/01/03 18:28:32 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/helpers.h"
 
-// int main()
-// {
-// 	int fd;
-// 	char	*file = NULL;
-// 	char *line;
-
-
-// 	fd = 0;
-// 	while ((line = get_next_line(fd)))
-// 		file = custom_strjoin(file, line);
-// 	printf("%s", file);
-// 	return (0);
-// }
-
-char	*reading_input(void)
+void	sorting(t_list **stack_a, t_list **stack_b, int argc)
 {
-	char	*file;
-	char	*line;
-	int		fd;
-
-	fd = 0;
-	file = NULL;
-	while ((line = get_next_line(fd)))
-		file = custom_strjoin(file, line);
-	return (file);
+	(void) stack_b;
+	if (argc == 2)
+		return (sx(*stack_a, "sa"));
+	else if (argc == 3)
+		return (sort_tolati(stack_a));
+	else if (argc > 3)
+		maymknch_sort(stack_a, stack_b, argc);
 }
