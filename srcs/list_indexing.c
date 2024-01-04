@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 19:23:49 by ijaija            #+#    #+#             */
-/*   Updated: 2024/01/03 19:24:35 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/04 19:13:09 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	list_indexing(t_list **stack_a, t_list **copy)
 	head_copy = (*copy)->head;
 	while (head && head_copy)
 	{
-		i = 0;
+		i = 1;
 		while (head_copy && head)
 		{
 			if (head_copy->value == head->value)
