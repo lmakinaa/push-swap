@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 15:10:17 by ijaija            #+#    #+#             */
-/*   Updated: 2024/01/03 19:00:36 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/04 16:05:54 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	l_display(t_list *list)
 	{
 		while (after_head->next)
 		{
-			ft_printf("[%d]-->[%d][%d]\n", i, after_head->value, after_head->index);
+			ft_printf("[%d]-->[%d][%d]\n", after_head->pos, after_head->value, after_head->index);
 			after_head = after_head->next;
 			i++;
 		}

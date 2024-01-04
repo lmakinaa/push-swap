@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 15:09:08 by ijaija            #+#    #+#             */
-/*   Updated: 2024/01/03 19:24:15 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/04 20:01:29 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,12 @@ void	sort_tolati(t_list **stack_a);
 t_list	*l_copy(t_list *list);
 void	maymknch_sort(t_list **stack_a, t_list **stack_b, int argc);
 void	list_indexing(t_list **stack_a, t_list **copy);
+int		get_pos_target(t_list **s_a, int index_b, int target_i, int target_pos);
+void	move_cost_init(t_list **stack_a, t_list **stack_b);
+void	lowest_cost_move(t_list **stack_a, t_list **stack_b);
+int		ft_abs(int n);
+void	rev_rot_both(t_list **s_a, t_list **s_b, int *moves_a, int *moves_b);
+void	rot_stack(t_list **stack, int *moves, char *s_rx, char *s_rrx);
+void	rot_both(t_list **s_a, t_list **s_b, int *moves_a, int *moves_b);
 
 #endif
