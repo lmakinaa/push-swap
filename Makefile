@@ -17,7 +17,7 @@ LIST_CONTROL_O=$(LIST_CONTROL_DIR)/c_list.o $(LIST_CONTROL_DIR)/c_node.o $(LIST_
 	$(LIST_CONTROL_DIR)/l_delnode.o $(LIST_CONTROL_DIR)/l_len.o $(LIST_CONTROL_DIR)/array_to_list.o $(LIST_CONTROL_DIR)/l_copy.o
 CHECKER_O=$(CHECKER_DIR)/main.o $(CHECKER_DIR)/reading_input.o $(CHECKER_DIR)/instructions_check.o $(CHECKER_DIR)/check_ok_or_ko.o 
 PS_O=$(SRCS_DIR)/main.o $(SRCS_DIR)/sorting.o $(SRCS_DIR)/sort_tolati.o $(SRCS_DIR)/maymknch_sort.o $(SRCS_DIR)/list_indexing.o\
-	 $(SRCS_DIR)/maymknch_sort_utils.o $(SRCS_DIR)/moves.o
+	 $(SRCS_DIR)/maymknch_sort_utils.o $(SRCS_DIR)/moves.o $(SRCS_DIR)/fix_stack.o
 BONUS_NAME=checker
 NAME=push_swap
 
