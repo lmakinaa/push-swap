@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 18:35:24 by ijaija            #+#    #+#             */
-/*   Updated: 2024/01/07 15:50:17 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/07 15:59:20 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,8 @@ void	targeting(t_list **stack_a, t_list **stack_b)
 	pos_target = 0;
 	while (head_b)
 	{
-		pos_target = get_pos_target(stack_a, head_b->index, INT_MAX, pos_target);
+		pos_target = get_pos_target(stack_a, head_b->index,
+				INT_MAX, pos_target);
 		head_b->pos_target = pos_target;
 		head_b = head_b->next;
 	}

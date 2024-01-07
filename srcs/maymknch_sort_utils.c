@@ -6,23 +6,15 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 16:45:30 by ijaija            #+#    #+#             */
-/*   Updated: 2024/01/07 15:32:45 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/07 15:58:31 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/helpers.h"
 
-/* get_pos_target:
-*	Picks the best target position in stack A for the given index of
-*	an element in stack B. First checks if the index of the B element can
-*	be placed somewhere in between elements in stack A, by checking whether
-*	there is an element in stack A with a bigger index. If not, it finds the
-*	element with the smallest index in A and assigns that as the target position.
-*/
-
 int	get_pos_target(t_list **s_a, int index_b, int target_i, int target_pos)
 {
-	t_node *head_a;
+	t_node	*head_a;
 
 	head_a = (*s_a)->head;
 	while (head_a)
@@ -94,14 +86,16 @@ void	lowest_cost_move(t_list **stack_a, t_list **stack_b)
 	int		move_cost_a;
 	int		move_cost_b;
 	t_node	*head_b;
-	
+
 	head_b = (*stack_b)->head;
 	lowest_cost = INT_MAX;
 	while (head_b && (*stack_a)->head)
 	{
-		if (ft_abs(head_b->move_cost_a) + ft_abs(head_b->move_cost_b) < ft_abs(lowest_cost))
+		if (ft_abs(head_b->move_cost_a) + ft_abs(head_b->move_cost_b)
+			< ft_abs(lowest_cost))
 		{
-			lowest_cost = ft_abs(head_b->move_cost_a) + ft_abs(head_b->move_cost_b);
+			lowest_cost = ft_abs(head_b->move_cost_a)
+				+ ft_abs(head_b->move_cost_b);
 			move_cost_a = head_b->move_cost_a;
 			move_cost_b = head_b->move_cost_b;
 		}

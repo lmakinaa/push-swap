@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 20:00:06 by ijaija            #+#    #+#             */
-/*   Updated: 2024/01/07 15:48:39 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/07 15:51:43 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	fix_stack(t_list **stack_a, int argc)
 {
 	t_node	*head_a;
 	int		beg_pos;
-	
+
 	head_a = (*stack_a)->head;
 	beg_pos = where_is_index_zero(stack_a);
 	if (beg_pos > argc / 2)
