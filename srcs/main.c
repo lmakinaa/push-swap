@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 16:30:54 by ijaija            #+#    #+#             */
-/*   Updated: 2024/01/03 19:23:03 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/07 15:56:23 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int	main(int argc, char **argv)
 	stack_b = c_list();
 	if (check_sorted(stack_a, argc) == 1)
 		return (freeingx(argv), free(args), l_free(&stack_a), 0);
-	// l_display(stack_a);
 	sorting(&stack_a, &stack_b, argc);
 	freeingx(argv);
 	free(args);

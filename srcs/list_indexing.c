@@ -6,43 +6,46 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 19:23:49 by ijaija            #+#    #+#             */
-/*   Updated: 2024/01/04 19:13:09 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/07 15:56:12 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/helpers.h"
 
-static void nodes_swap(t_node *a, t_node *b)
+static void	nodes_swap(t_node *a, t_node *b)
 {
-    int temp = a->value;
-    a->value = b->value;
-    b->value = temp;
+	int	temp;
+
+	temp = a->value;
+	a->value = b->value;
+	b->value = temp;
 }
 
-static void list_sorting(t_list *list)
+static void	list_sorting(t_list *list)
 {
-    int swapped;
-    t_node *ptr1;
-    t_node *lptr;
-	
+	int		swapped;
+	t_node	*ptr1;
+	t_node	*lptr;
+
 	lptr = NULL;
 	swapped = 1;
-    if (list->head == NULL)
-        return;
-    while (swapped)
+	if (list->head == NULL)
+		return ;
+	while (swapped)
 	{
-        swapped = 0;
-        ptr1 = list->head;
-
-        while (ptr1->next != lptr) {
-            if (ptr1->value > ptr1->next->value) { 
-                nodes_swap(ptr1, ptr1->next);
-                swapped = 1;
-            }
-            ptr1 = ptr1->next;
-        }
-        lptr = ptr1;
-    }
+		swapped = 0;
+		ptr1 = list->head;
+		while (ptr1->next != lptr)
+		{
+			if (ptr1->value > ptr1->next->value)
+			{
+				nodes_swap(ptr1, ptr1->next);
+				swapped = 1;
+			}
+			ptr1 = ptr1->next;
+		}
+		lptr = ptr1;
+	}
 }
 
 void	list_indexing(t_list **stack_a, t_list **copy)
