@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 17:24:39 by ijaija            #+#    #+#             */
-/*   Updated: 2024/01/02 16:00:39 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/07 15:07:50 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ void	px(t_list *stack_x1, t_list *stack_x2, char *print)
 		stack_x2->head = stack_x2->head->next;
 		tmp->next = stack_x1->head;
 		stack_x1->head = tmp;
+		if (!stack_x1->tail)
+			stack_x1->tail = stack_x1->head;
 	}
 	if (print)
 		ft_putendl_fd(print, 1);
