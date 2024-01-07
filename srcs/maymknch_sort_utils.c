@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 16:45:30 by ijaija            #+#    #+#             */
-/*   Updated: 2024/01/04 20:04:42 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/07 15:32:45 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,14 +72,19 @@ void	move_cost_init(t_list **stack_a, t_list **stack_b)
 	}
 }
 
-void	move_stacks(t_list **s_a, t_list **s_b, int *moves_a, int *moves_b)
+void	move_stacks(t_list **s_a, t_list **s_b, int mov_a, int mov_b)
 {
-	if (*moves_a < 0 && *moves_b < 0)
-		rev_rot_both(s_a, s_b, moves_a, moves_b);
-	else if (*moves_a > 0 && *moves_b > 0)
-		rot_both(s_a, s_b, moves_a, moves_b);
-	rot_stack(s_a, moves_a, "ra", "rra");
-	rot_stack(s_b, moves_b, "rb", "rrb");
+	int	moves_a;
+	int	moves_b;
+
+	moves_a = mov_a;
+	moves_b = mov_b;
+	if (moves_a < 0 && moves_b < 0)
+		rev_rot_both(s_a, s_b, &moves_a, &moves_b);
+	else if (moves_a > 0 && moves_b > 0)
+		rot_both(s_a, s_b, &moves_a, &moves_b);
+	rot_stack(s_a, &moves_a, "ra", "rra");
+	rot_stack(s_b, &moves_b, "rb", "rrb");
 	px(*s_a, *s_b, "pa");
 }
 
@@ -92,7 +97,7 @@ void	lowest_cost_move(t_list **stack_a, t_list **stack_b)
 	
 	head_b = (*stack_b)->head;
 	lowest_cost = INT_MAX;
-	while (head_b)
+	while (head_b && (*stack_a)->head)
 	{
 		if (ft_abs(head_b->move_cost_a) + ft_abs(head_b->move_cost_b) < ft_abs(lowest_cost))
 		{
@@ -102,5 +107,5 @@ void	lowest_cost_move(t_list **stack_a, t_list **stack_b)
 		}
 		head_b = head_b->next;
 	}
-	move_stacks(stack_a, stack_b, &move_cost_a, &move_cost_b);
+	move_stacks(stack_a, stack_b, move_cost_a, move_cost_b);
 }
