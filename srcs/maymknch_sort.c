@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 18:35:24 by ijaija            #+#    #+#             */
-/*   Updated: 2024/01/07 15:45:52 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/07 15:50:17 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,6 @@ void	maymknch_sort(t_list **stack_a, t_list **stack_b, int argc)
 		move_cost_init(stack_a, stack_b);
 		lowest_cost_move(stack_a, stack_b);
 	}
-	// l_display(*stack_a);
 	if (check_sorted(*stack_a, argc) != 1)
 		fix_stack(stack_a, argc);
 }
