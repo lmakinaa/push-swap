@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 16:30:54 by ijaija            #+#    #+#             */
-/*   Updated: 2024/01/07 15:56:23 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/08 13:37:55 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ int	main(int argc, char **argv)
 	if (args_parsing(&argc, &argv, &args) == -1)
 		fail_exit();
 	stack_a = array_to_list(args, argc);
-	stack_b = c_list();
 	if (check_sorted(stack_a, argc) == 1)
 		return (freeingx(argv), free(args), l_free(&stack_a), 0);
+	stack_b = c_list();
 	sorting(&stack_a, &stack_b, argc);
 	freeingx(argv);
 	free(args);
