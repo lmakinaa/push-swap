@@ -6,13 +6,13 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 15:39:29 by ijaija            #+#    #+#             */
-/*   Updated: 2023/12/18 16:23:47 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/10 11:32:49 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/helpers.h"
 
-static void	cleaner(char **res)
+void	cleaner(char **res)
 {
 	char	**start;
 
