@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 15:36:50 by ijaija            #+#    #+#             */
-/*   Updated: 2024/01/04 19:09:04 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/10 11:41:37 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define LIST_CONTROL_H
 
 # include <stdlib.h>
-# include <stdio.h>
 
 typedef struct s_node
 {
