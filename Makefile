@@ -9,7 +9,7 @@ LIST_HEADER_H=./includes/list_control.h
 HELPERS_O=$(HELPERS_DIR)/ft_printf.o $(HELPERS_DIR)/ft_putchar.o $(HELPERS_DIR)/ft_putnbr.o $(HELPERS_DIR)/ft_putstr.o\
 	$(HELPERS_DIR)/ft_putaddr.o $(HELPERS_DIR)/ft_puthex.o $(HELPERS_DIR)/ft_numbase_len.o $(HELPERS_DIR)/custom_atoi.o\
 	$(HELPERS_DIR)/ft_isdigit.o $(HELPERS_DIR)/ft_putstr_fd.o $(HELPERS_DIR)/fail_exit.o $(HELPERS_DIR)/args_parsing.o\
-	$(HELPERS_DIR)/get_next_line.o $(HELPERS_DIR)/get_next_line_utils.o $(HELPERS_DIR)/ft_abs.o\
+	$(HELPERS_DIR)/get_next_line.o $(HELPERS_DIR)/get_next_line_utils.o $(HELPERS_DIR)/ft_abs.o $(HELPERS_DIR)/some_cleaning.o\
 	$(HELPERS_DIR)/ft_split.o $(HELPERS_DIR)/ft_strcmp.o $(HELPERS_DIR)/processing_args.o\
 	$(HELPERS_DIR)/rrx.o $(HELPERS_DIR)/sx_px.o $(HELPERS_DIR)/str_arrays_join.o $(HELPERS_DIR)/check_sorted.o $(HELPERS_DIR)/ft_putendl_fd.o
 LIST_CONTROL_O=$(LIST_CONTROL_DIR)/c_list.o $(LIST_CONTROL_DIR)/c_node.o $(LIST_CONTROL_DIR)/l_addafter.o $(LIST_CONTROL_DIR)/l_addback.o\

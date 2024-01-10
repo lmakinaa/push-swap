@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 15:08:39 by ijaija            #+#    #+#             */
-/*   Updated: 2024/01/10 10:00:40 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/10 11:36:26 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ int	main(int argc, char **argv)
 	free(args);
 	s_b = c_list();
 	processing_args(instructions, s_a, s_b);
+	some_cleaning(&s_b, instructions);
 	return (check_ok_or_ko(s_a, argc), 0);
 }

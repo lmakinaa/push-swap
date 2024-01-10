@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 15:09:08 by ijaija            #+#    #+#             */
-/*   Updated: 2024/01/07 15:49:29 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/10 11:33:26 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,7 @@ void	rot_stack(t_list **stack, int *moves, char *s_rx, char *s_rrx);
 void	rot_both(t_list **s_a, t_list **s_b, int *moves_a, int *moves_b);
 void	fix_stack(t_list **stack_a, int argc);
 void	list_init_pos(t_list **stack_a);
+void	cleaner(char **res);
+void	some_cleaning(t_list **s_b, char **instructions);
 
 #endif
