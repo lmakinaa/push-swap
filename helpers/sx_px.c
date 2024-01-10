@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 17:24:39 by ijaija            #+#    #+#             */
-/*   Updated: 2024/01/07 15:07:50 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/09 10:55:26 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 void	sx(t_list *stack_x, char *print)
 {
-	int		tmp;
+	t_node	*tmp;
 
 	if (l_len(stack_x) > 1)
 	{
-		tmp = stack_x->head->value;
-		stack_x->head->value = stack_x->head->next->value;
-		stack_x->head->next->value = tmp;
+		tmp = stack_x->head;
+		stack_x->head = stack_x->head->next;
+		tmp->next = stack_x->head->next;
+		stack_x->head->next = tmp;
 	}
 	if (print)
 		ft_putendl_fd(print, 1);

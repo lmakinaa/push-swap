@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 18:35:24 by ijaija            #+#    #+#             */
-/*   Updated: 2024/01/07 15:59:20 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/09 11:38:15 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,6 @@ void	targeting(t_list **stack_a, t_list **stack_b)
 	int		pos_target;
 
 	head_b = (*stack_b)->head;
-	list_init_pos(stack_a);
-	list_init_pos(stack_b);
 	pos_target = 0;
 	while (head_b)
 	{
@@ -80,8 +78,10 @@ void	maymknch_sort(t_list **stack_a, t_list **stack_b, int argc)
 	push_until_three(stack_a, stack_b, argc);
 	head_b = (*stack_b)->head;
 	sort_tolati(stack_a);
-	while (head_b && (*stack_b)->head)
+	while ((*stack_b)->head)
 	{
+		list_init_pos(stack_a);
+		list_init_pos(stack_b);
 		targeting(stack_a, stack_b);
 		move_cost_init(stack_a, stack_b);
 		lowest_cost_move(stack_a, stack_b);

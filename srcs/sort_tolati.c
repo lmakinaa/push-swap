@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 15:39:49 by ijaija            #+#    #+#             */
-/*   Updated: 2024/01/03 16:10:32 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/09 10:55:00 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	sort_tolati(t_list **stack_a)
 	if (head->value > head->next->value)
 	{
 		sx(*stack_a, "sa");
+		head = (*stack_a)->head;
 		if (head->value > head->next->next->value)
 			rrx(*stack_a, "rra");
 		else if (head->next->value > head->next->next->value)
