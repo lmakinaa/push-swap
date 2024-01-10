@@ -31,17 +31,17 @@ $(NAME): $(HELPERS_O) $(LIST_CONTROL_O) $(PS_O)
 $(BONUS_NAME): $(HELPERS_O) $(CHECKER_O) $(LIST_CONTROL_O)
 	$(CC) $(CFLAGS) $^ -o checker
 
-$(CHECKER_DIR)/%.o: $(CHECKER_DIR)/.c $(HEADER_H) $(LIST_HEADER_H)
-	$(CC) $(CFLAGS) -c $<
+$(CHECKER_DIR)/%.o: $(CHECKER_DIR)/%.c $(HEADER_H) $(LIST_HEADER_H)
+	$(CC) $(CFLAGS) -c $< -o $@
 
-$(HELPERS_DIR)/%.o: $(HELPERS_DIR)/.c $(HEADER_H) $(LIST_HEADER_H)
-	$(CC) $(CFLAGS) -c $<
+$(HELPERS_DIR)/%.o: $(HELPERS_DIR)/%.c $(HEADER_H) $(LIST_HEADER_H)
+	$(CC) $(CFLAGS) -c $< -o $@
 
-$(LIST_CONTROL_DIR)/%.o: $(LIST_CONTROL_DIR)/.c $(HEADER_H) $(LIST_HEADER_H)
-	$(CC) $(CFLAGS) -c $<
+$(LIST_CONTROL_DIR)/%.o: $(LIST_CONTROL_DIR)/%.c $(HEADER_H) $(LIST_HEADER_H)
+	$(CC) $(CFLAGS) -c $< -o $@
 
-$(SRCS_DIR)/%.o: $(SRCS_DIR)/.c $(HEADER_H) $(LIST_HEADER_H)
-	$(CC) $(CFLAGS) -c $<
+$(SRCS_DIR)/%.o: $(SRCS_DIR)/%.c $(HEADER_H) $(LIST_HEADER_H)
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(CHECKER_O) $(HELPERS_O) $(LIST_CONTROL_O) $(PS_O)
