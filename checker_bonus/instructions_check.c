@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 11:49:12 by ijaija            #+#    #+#             */
-/*   Updated: 2023/12/31 19:42:52 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/10 10:03:04 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,11 @@ int	instructions_check(char *file)
 	while (file[i])
 	{
 		if (file[i] == '\n')
+		{
+			if (file[i + 1] == '\n' || i == 0)
+				exit(ft_printf("Error\n"));
 			i++;
+		}
 		else if (check_duos(file, i) != -1)
 			i = check_duos(file, i);
 		else if (check_trios(file, i) != -1)
