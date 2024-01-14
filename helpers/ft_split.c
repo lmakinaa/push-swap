@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 15:39:29 by ijaija            #+#    #+#             */
-/*   Updated: 2024/01/14 17:46:30 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/14 17:56:18 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,6 +109,8 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
+	if (*s == '\0')
+		fail_exit();
 	size = ft_countword(s, c);
 	res = malloc((size + 1) * sizeof(char *));
 	if (!res)
