@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 10:17:47 by ijaija            #+#    #+#             */
-/*   Updated: 2024/01/10 10:16:36 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/14 17:46:08 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,7 @@ long	custom_atoi(const char *str)
 	i = 0;
 	sign = 0;
 	passed = 0;
-	while (str[i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
-			|| str[i] == '\r' || str[i] == '\v' || str[i] == '\f'))
+	while (str[i] && (str[i] == ' '))
 		i++;
 	if ((str[i] == '-' || str[i] == '+') && str[i])
 	{

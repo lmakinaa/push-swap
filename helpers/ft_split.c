@@ -6,7 +6,7 @@
 /*   By: ijaija <ijaija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 15:39:29 by ijaija            #+#    #+#             */
-/*   Updated: 2024/01/10 11:32:49 by ijaija           ###   ########.fr       */
+/*   Updated: 2024/01/14 17:46:30 by ijaija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ static int	ft_countword(char const *str, char sep)
 		}
 		i++;
 	}
+	if (count == 0)
+		fail_exit();
 	return (count);
 }
 
