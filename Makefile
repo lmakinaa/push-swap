@@ -58,7 +58,7 @@ PS_O=srcs/fix_stack.o\
 BONUS_NAME=checker
 NAME=push_swap
 
-all: $(NAME)
+all: $(NAME) bonus
 
 bonus: $(BONUS_NAME)
 
